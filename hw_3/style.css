@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    max-width: 500px;
+    min-height: 400px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.image_box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.image_bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image_photographer-box {
+    gap: 10px;
+    background-color: rgb(64, 64, 64);
+}
+
+.image_photographer-box,
+.image_likes-box {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.image_photographer-name,
+.image_photographer {
+    text-align: center;
+}
+
+.image_likes-box {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    background-color: rgb(224, 80, 80);
+    transition: 0.3s ease;
+}
+
+.image_likes-box:hover {
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s ease;
+}
+
+
+.image_likes-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.image_likes-counter {
+    font-size: xx-large;
+    transition: 0.3s ease;
+}
+
+.image_likes-box:hover .image_likes-counter{
+    color: rgb(224, 80, 80);
+    transition: 0.3s ease;
+}
+
+.image_likes-box:hover .image_likes-svg path{
+    fill: rgb(224, 80, 80);
+    transition: 0.3s ease;
+}
+
+.image_likes-box:active .image_likes-svg path{
+    fill: rgb(234, 0, 0);
+    transition: 0.3s ease;
+}
+
+.image_likes-box:active .image_likes-svg {
+    width: 65px;
+    height: 65px;
+    transition: 0.3s ease;
+}
